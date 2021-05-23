@@ -6,6 +6,9 @@
 using System;
 using System.Net;
 
+// ReSharper disable MemberCanBePrivate.Global
+// ReSharper disable UnusedAutoPropertyAccessor.Global
+
 namespace SniffCore.Networking
 {
     /// <summary>

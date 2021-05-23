@@ -5,6 +5,8 @@
 
 using System;
 
+// ReSharper disable ClassNeverInstantiated.Global
+
 namespace SniffCore.Networking
 {
     /// <summary>
