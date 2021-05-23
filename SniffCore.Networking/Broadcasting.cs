@@ -9,7 +9,7 @@ using System.Collections.Generic;
 namespace SniffCore.Networking
 {
     /// <inheritdoc />
-    public class Broadcasting : IBroadcasting
+    public sealed class Broadcasting : IBroadcasting
     {
         private readonly Dictionary<ServerToken, BroadcastServer> _servers;
 
@@ -44,11 +44,11 @@ namespace SniffCore.Networking
         /// </summary>
         public void Dispose()
         {
-            foreach (var server in _servers)
+            foreach (var (_, value) in _servers)
             {
-                server.Value.ClientMessageReceiving -= OnClientMessageReceiving;
-                server.Value.ClientMessageReceived -= OnClientMessageReceived;
-                server.Value.Dispose();
+                value.ClientMessageReceiving -= OnClientMessageReceiving;
+                value.ClientMessageReceived -= OnClientMessageReceived;
+                value.Dispose();
             }
         }
 
@@ -61,13 +61,13 @@ namespace SniffCore.Networking
         /// <inheritdoc />
         public void Dispose(ServerToken token)
         {
-            if (_servers.TryGetValue(token, out var server))
-            {
-                server.ClientMessageReceiving -= OnClientMessageReceiving;
-                server.ClientMessageReceived -= OnClientMessageReceived;
-                server.Dispose();
-                _servers.Remove(token);
-            }
+            if (!_servers.TryGetValue(token, out var server))
+                return;
+
+            server.ClientMessageReceiving -= OnClientMessageReceiving;
+            server.ClientMessageReceived -= OnClientMessageReceived;
+            server.Dispose();
+            _servers.Remove(token);
         }
 
         private void OnClientMessageReceiving(object sender, ClientMessageReceivingEventArgs e)
