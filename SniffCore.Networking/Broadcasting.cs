@@ -5,6 +5,7 @@
 
 using System;
 using System.Collections.Generic;
+using SniffCore.Networking.Internal;
 
 namespace SniffCore.Networking
 {
