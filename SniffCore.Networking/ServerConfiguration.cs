@@ -20,11 +20,17 @@ namespace SniffCore.Networking
         /// <param name="port">The port the server listens to.</param>
         /// <param name="responseMessage">The message to reply if the filter confirmed.</param>
         /// <param name="filter">The filter on what message to reply.</param>
+        /// <exception cref="ArgumentException">invalid port.</exception>
+        /// <exception cref="ArgumentNullException">responseMessage is null.</exception>
+        /// <exception cref="ArgumentNullException">filter is null.</exception>
         public ServerConfiguration(int port, string responseMessage, Func<string, bool> filter)
         {
+            if (port <= 0)
+                throw new ArgumentException("invalid port", nameof(port));
+
             Port = port;
-            ResponseMessage = responseMessage;
-            Filter = filter;
+            ResponseMessage = responseMessage ?? throw new ArgumentNullException(nameof(responseMessage));
+            Filter = filter ?? throw new ArgumentNullException(nameof(filter));
         }
 
         /// <summary>

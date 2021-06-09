@@ -20,10 +20,15 @@ namespace SniffCore.Networking
         /// <param name="port">The port to send the UDP message on.</param>
         /// <param name="message">The message to send on the UDP.</param>
         /// <param name="timeout">The timeout how long to wait for a UDP server response.</param>
+        /// <exception cref="ArgumentNullException">message is null.</exception>
+        /// <exception cref="ArgumentException">timeout cannot be zero.</exception>
         public ClientConfiguration(int port, string message, TimeSpan timeout)
         {
+            if (timeout == TimeSpan.Zero)
+                throw new ArgumentException("timeout cannot be zero", nameof(timeout));
+
             Port = port;
-            Message = message;
+            Message = message ?? throw new ArgumentNullException(nameof(message));
             Timeout = timeout;
         }
 

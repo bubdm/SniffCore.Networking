@@ -1,7 +1,7 @@
 SniffCore.Networking
 ===
 
-SniffCore.Networking provides methods and objects for a more easy networking communication.
+SniffCore.Networking provides methods and objects for a more easy network communication.
 
 ## How To
 * [Documentation](http://wiki.sniffcore.com)
