@@ -9,14 +9,14 @@ using System.Net;
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
-    ///     Raised if a client message just came in and was allowed. Reply is not sent yet.
+    ///     Raised if a client message just came in and was allowed. Reply has been sent already.
     /// </summary>
-    public sealed class ClientMessageReceivingEventArgs : EventArgs
+    public sealed class ClientMessageReceivedEventArgs : EventArgs
     {
-        internal ClientMessageReceivingEventArgs(IPAddress address, string message, ServerConfiguration configuration)
+        internal ClientMessageReceivedEventArgs(IPAddress address, string message, ServerConfiguration configuration)
         {
             Address = address;
             Message = message;

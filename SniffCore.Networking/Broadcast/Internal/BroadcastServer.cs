@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace SniffCore.Networking.Internal
+namespace SniffCore.Networking.Broadcast.Internal
 {
     internal sealed class BroadcastServer : IDisposable
     {

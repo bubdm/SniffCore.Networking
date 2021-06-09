@@ -7,7 +7,7 @@ using System;
 
 // ReSharper disable ClassNeverInstantiated.Global
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
     ///     The server configuration when to response on what port.

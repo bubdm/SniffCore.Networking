@@ -5,7 +5,7 @@
 
 using System;
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
     ///     The token which represents a single broadcasting server.

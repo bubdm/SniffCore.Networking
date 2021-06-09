@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 
-namespace SniffCore.Networking.Internal
+namespace SniffCore.Networking.Broadcast.Internal
 {
     internal sealed class BroadcastClient
     {

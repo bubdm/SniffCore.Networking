@@ -7,7 +7,7 @@ using System;
 
 // ReSharper disable ClassNeverInstantiated.Global
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
     ///     The configuration data of the broadcasting client what to send to an UDP broadcasting server on which port.

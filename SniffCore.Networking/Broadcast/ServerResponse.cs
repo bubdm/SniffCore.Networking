@@ -8,7 +8,7 @@ using System.Net;
 // ReSharper disable MemberCanBePrivate.Global
 // ReSharper disable UnusedAutoPropertyAccessor.Global
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
     ///     Represents the response from a UDP broadcasting server.

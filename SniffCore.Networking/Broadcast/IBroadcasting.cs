@@ -5,7 +5,7 @@
 
 using System;
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
     ///     Provides possibilities to launch UDP broadcasting server and send messages to them on the network.

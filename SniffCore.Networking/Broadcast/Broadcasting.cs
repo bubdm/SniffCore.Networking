@@ -5,9 +5,9 @@
 
 using System;
 using System.Collections.Generic;
-using SniffCore.Networking.Internal;
+using SniffCore.Networking.Broadcast.Internal;
 
-namespace SniffCore.Networking
+namespace SniffCore.Networking.Broadcast
 {
     /// <summary>
     ///     Provides possibilities to launch UDP broadcasting server and send messages to them on the network.
