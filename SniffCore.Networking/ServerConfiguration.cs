@@ -27,9 +27,11 @@ namespace SniffCore.Networking
         {
             if (port <= 0)
                 throw new ArgumentException("invalid port", nameof(port));
+            if (string.IsNullOrWhiteSpace(responseMessage))
+                throw new ArgumentException("Value cannot be null or whitespace.", nameof(responseMessage));
 
             Port = port;
-            ResponseMessage = responseMessage ?? throw new ArgumentNullException(nameof(responseMessage));
+            ResponseMessage = responseMessage;
             Filter = filter ?? throw new ArgumentNullException(nameof(filter));
         }
 

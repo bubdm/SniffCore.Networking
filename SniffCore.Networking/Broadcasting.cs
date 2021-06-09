@@ -96,8 +96,12 @@ namespace SniffCore.Networking
         /// }
         /// ]]>
         /// </example>
+        /// <exception cref="ArgumentNullException">configuration is null.</exception>
         public ServerToken Start(ServerConfiguration configuration)
         {
+            if (configuration == null)
+                throw new ArgumentNullException(nameof(configuration));
+
             var token = new ServerToken();
             var server = new BroadcastServer();
             server.ClientMessageReceiving += OnClientMessageReceiving;
@@ -147,8 +151,15 @@ namespace SniffCore.Networking
         /// }
         /// ]]>
         /// </example>
+        /// <exception cref="ArgumentNullException">configuration is null.</exception>
+        /// <exception cref="ArgumentNullException">callback is null.</exception>
         public void Send(ClientConfiguration configuration, Action<ServerResponse> callback)
         {
+            if (configuration == null)
+                throw new ArgumentNullException(nameof(configuration));
+            if (callback == null)
+                throw new ArgumentNullException(nameof(callback));
+
             new BroadcastClient().Run(configuration, callback);
         }
 
@@ -156,8 +167,12 @@ namespace SniffCore.Networking
         ///     Stops the UDP broadcasting server started by the given token.
         /// </summary>
         /// <param name="token">The token of the UDP broadcasting server to stop.</param>
+        /// <exception cref="ArgumentNullException">token is null.</exception>
         public void Dispose(ServerToken token)
         {
+            if (token == null)
+                throw new ArgumentNullException(nameof(token));
+
             if (!_servers.TryGetValue(token, out var server))
                 return;
 
