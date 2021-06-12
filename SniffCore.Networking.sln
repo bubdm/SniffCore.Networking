@@ -7,11 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SniffCore.Networking", "Sni
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36D51654-56A2-4702-A544-078068F2C7EC}"
 	ProjectSection(SolutionItems) = preProject
+		Icon.png = Icon.png
 		LICENSE = LICENSE
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SniffCore.Networking.Tests", "SniffCore.Networking.Tests\SniffCore.Networking.Tests.csproj", "{F6D34DFA-74E9-4C93-8AB7-F92B98C1688E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SniffCore.Networking.Tests", "SniffCore.Networking.Tests\SniffCore.Networking.Tests.csproj", "{F6D34DFA-74E9-4C93-8AB7-F92B98C1688E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
