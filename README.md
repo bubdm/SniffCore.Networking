@@ -4,7 +4,7 @@ SniffCore.Networking
 SniffCore.Networking provides methods and objects for a more easy network communication.
 
 ## How To
-* [Documentation](http://wiki.sniffcore.com)
+* [Documentation](http://documentation.sniffcore.com/)
 * [Website](http://sniffcore.com)
 
 ## License
