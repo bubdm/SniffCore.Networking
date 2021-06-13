@@ -4,6 +4,7 @@ SniffCore.Networking
 SniffCore.Networking provides methods and objects for a more easy network communication.
 
 ## How To
+* [NuGet](https://www.nuget.org/packages/SniffCore.Networking)
 * [Documentation](http://documentation.sniffcore.com/)
 * [Website](http://sniffcore.com)
 
